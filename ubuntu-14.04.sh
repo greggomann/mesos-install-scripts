@@ -11,3 +11,10 @@ sudo apt-get -y install build-essential python-dev python-boto libcurl4-nss-dev 
 mkdir src
 cd src
 git clone https://git-wip-us.apache.org/repos/asf/mesos.git
+
+cd mesos
+mkdir build
+./bootstrap
+cd build
+../configure --enable-libevent --enable-ssl --prefix="$HOME/local"
+
